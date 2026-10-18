@@ -13,9 +13,9 @@ This document provides instructions on how to install required software.  Instru
 
 
 ## Anaconda and Astropy
-This installation is done in a Windows Subsystem for Linux terminal session.  **`$` indicates a Linux prompt; you do not need to re-type the `$`, only the command that follows.**
+This installation is done in a Windows Subsystem for Linux terminal session.  *`$` indicates a Linux prompt; you do not need to re-type the `$`, only the command that follows.*
 
-To install [conda](https://github.com/conda-forge/miniforge):
+**To install [conda](https://github.com/conda-forge/miniforge):**
 
 ```
 $ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
@@ -24,12 +24,15 @@ $ bash Miniforge3-$(uname)-$(uname -m).sh
 
 The installer will prompt you to initialize `conda` for your shell, do this.
 
-To create the astropy environment:
+**To create the astropy environment:**
 
 ```
 $ conda create --channel conda-forge  --name astropy python
 $ conda activate astropy
+$ conda install --channel conda-forge scipy matplotlib
 ```
+
+To activate the `astropy` environment in the future (for example, if you have just started a new WSL session), type `conda activate astropy`
 
 ## SAOImageDS9
 **DS9** can be installed both within the WSL as well as natively in Windows.  You need to install DS9 within WSL in order for it to interact with IRAF and PyRAF properly.  To install in WSL, do:
@@ -40,10 +43,10 @@ sudo apt install saods9
 
 After DS9 has installed, type `ds9` to launch.
 
-If you would like to install DS9 on Windows, visit <https://sites.google.com/cfa.harvard.edu/saoimageds9/download> to get the Windows installer.
+*If you would like to install DS9 on Windows, visit <https://sites.google.com/cfa.harvard.edu/saoimageds9/download> to get the Windows installer.*
 
 ## AstroImageJ
-Visit <https://astroimagej.com/#download> to download the Windows version of __AstroImageJ__.  This software package can run natively on Windows.  The installer is hosted on a slow mirror and can take about ~10 minutes to download.
+Visit <https://astroimagej.com/#download> to download the Windows version of __AstroImageJ__.  This software package can run natively on Windows.  The installer is hosted on a slow mirror and can take about ~10 minutes to download.  Open the downloaded installer and use the defaults it offers you.  `AstroImageJ` will be available in your __Start__ menu on Windows after installation.
 
 ## TOPCAT
 First, you will need to install Java: <https://www.java.com/en/download/manual.jsp>
