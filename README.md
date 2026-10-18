@@ -14,7 +14,7 @@ This document provides instructions on how to install required software.
 ## Anaconda and Astropy
 This installation is done in a Windows Subsystem for Linux terminal session.  **`$` indicates a Linux prompt; you do not need to re-type the `$`, only the command that follows.**
 
-To install conda:
+To install [conda](https://github.com/conda-forge/miniforge):
 
 ```
 $ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
