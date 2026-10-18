@@ -54,7 +54,7 @@ First, you will need to install Java: <https://www.java.com/en/download/manual.j
 
 Then, download the `topcat-full.jar` file from <https://www.star.bris.ac.uk/~mbt/topcat/#standalone>
 
-To launch __TOPCAT__, double-click topcat-full.jar after the download has completed and choose "Allow" on any permission prompts you are presented.
+To launch __TOPCAT__, double-click `topcat-full.jar` after the download has completed and choose "Allow" on any permission prompts you are presented.
 
 ## Aperture Photometry Tool
 Download `APT_v3.1.0.zip` ("for Windows machines") from <https://www.aperturephotometry.org/downloads/>
