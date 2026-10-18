@@ -53,7 +53,7 @@ Then, download the `topcat-full.jar` file from <https://www.star.bris.ac.uk/~mbt
 To launch __TOPCAT__, double-click topcat-full.jar after the download has completed and choose "Allow" on any permission prompts you are presented.
 
 ## Aperture Photometry Tool
-Download APT_v3.1.0.zip ("for Windows machines") from <https://www.aperturephotometry.org/downloads/>
+Download `APT_v3.1.0.zip` ("for Windows machines") from <https://www.aperturephotometry.org/downloads/>
 
 You may need to accept an expired SSL certificate to reach this website.
 
