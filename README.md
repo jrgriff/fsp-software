@@ -39,21 +39,21 @@ sudo apt install saods9
 
 After DS9 has installed, type `ds9` to launch.
 
-If you would like to install DS9 on Windows, visit [https://sites.google.com/cfa.harvard.edu/saoimageds9/download] to get the Windows installer.
+If you would like to install DS9 on Windows, visit <https://sites.google.com/cfa.harvard.edu/saoimageds9/download> to get the Windows installer.
 
 ## AstroImageJ
-Visit [https://astroimagej.com/#download] to download the Windows version of __AstroImageJ__.  This software package can run natively on Windows.  The installer is hosted on a slow mirror and can take about ~10 minutes to download.
+Visit <https://astroimagej.com/#download> to download the Windows version of __AstroImageJ__.  This software package can run natively on Windows.  The installer is hosted on a slow mirror and can take about ~10 minutes to download.
 
 ## TOPCAT
-First, you will need to install Java: [https://www.java.com/en/download/manual.jsp]
+First, you will need to install Java: <https://www.java.com/en/download/manual.jsp>
 - *Try the Windows Online installer first, and use the Offline installers if you encounter problems.*
 
-Then, download the `topcat-full.jar` file from [https://www.star.bris.ac.uk/~mbt/topcat/#standalone]
+Then, download the `topcat-full.jar` file from <https://www.star.bris.ac.uk/~mbt/topcat/#standalone>
 
 To launch __TOPCAT__, double-click topcat-full.jar after the download has completed and choose "Allow" on any permission prompts you are presented.
 
 ## Aperture Photometry Tool
-Download APT_v3.1.0.zip ("for Windows machines") from https://www.aperturephotometry.org/downloads/
+Download APT_v3.1.0.zip ("for Windows machines") from <https://www.aperturephotometry.org/downloads/>
 
 You may need to accept an expired SSL certificate to reach this website.
 
@@ -64,9 +64,9 @@ Extract the contents of the zip file to a location that is convient for you.  __
 To install __IRAF__ and __PyRAF__, run the following command:
 
 ```
-sudo apt install iraf python3-pyraf python3-pyds9
+$ sudo apt install iraf python3-pyraf python3-pyds9
 ```
 
 ## File sharing between Windows and Linux
 
-To access files in your Linux environment from Windows, or to access files on your Windows host from within the Linux environment, follow the directions outlined here: [https://learn.microsoft.com/en-us/windows/wsl/filesystems]
+To access files in your Linux environment from Windows, or to access files on your Windows host from within the Linux environment, follow the directions outlined here: <https://learn.microsoft.com/en-us/windows/wsl/filesystems>
