@@ -1,5 +1,6 @@
 # Astronomy FSP in South Africa Software Installation
-This document provides instructions on how to install required software.
+
+This document provides instructions on how to install required software.  Instructions provided are for Ubuntu installed under the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install).
 
 ## Table of contents
 1. [Anaconda and Astropy](#anaconda-and-astropy)
@@ -66,6 +67,8 @@ To install __IRAF__ and __PyRAF__, run the following command:
 ```
 $ sudo apt install iraf python3-pyraf python3-pyds9
 ```
+
+To launch IRAF you will need to 
 
 ## File sharing between Windows and Linux
 
