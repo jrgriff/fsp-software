@@ -3,7 +3,7 @@
 This document provides instructions on how to install required software.  Instructions provided are for [Ubuntu](https://ubuntu.com/wsl/docs/stable/howto/install-ubuntu-wsl2/) installed under the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) (__WSL__).
 
 ## Table of contents
-1. [Anaconda and Astropy](#anaconda-and-astropy)
+1. [conda/mamba and astropy](#conda-mamba-and-astropy)
 2. [SAOImageDS9](#saoimageds9)
 3. [AstroImageJ](#astroimagej)
 4. [TOPCAT](#topcat)
@@ -13,27 +13,29 @@ This document provides instructions on how to install required software.  Instru
 8. [Additional documentation](#additional-documentation)
 
 
-## Anaconda and Astropy
+## conda/mamba and astropy
 This installation is done in a WSL terminal.  *`$` indicates a Linux prompt; you do not need to re-type the `$`, only the command that follows.*
 
-**To install [conda](https://github.com/conda-forge/miniforge):**
+For the purposes of this guide, you will be installing [Miniforge](https://github.com/conda-forge/miniforge), a lightweight version of `conda` that also provides [`mamba`](https://mamba.readthedocs.io/en/latest/), a faster version of `conda`.
+
+**To install [Miniforge](https://github.com/conda-forge/miniforge#unix-like-platforms-macos-linux--wsl):**
 
 ```
 $ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 $ bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-The installer will prompt you to initialize `conda` for your shell, do this.
+The installer may prompt you to initialize `conda` for your shell; do this, and then also do `mamba init`.
 
 **To create the astropy environment:**
 
 ```
-$ conda create --channel conda-forge  --name astropy python
-$ conda activate astropy
-$ conda install --channel conda-forge scipy matplotlib
+$ mamba create --channel conda-forge  --name astropy python
+$ mamba activate astropy
+$ mamba install --channel conda-forge scipy matplotlib
 ```
 
-To activate the `astropy` environment in the future (for example, if you have just started a new WSL session), type `conda activate astropy`
+To activate the `astropy` environment in the future (for example, if you have just started a new WSL session), type `mamba activate astropy`
 
 ## SAOImageDS9
 **DS9** can be installed both within the WSL as well as natively in Windows.  You need to install DS9 within WSL in order for it to interact with IRAF and PyRAF properly.  To install in WSL, do:
