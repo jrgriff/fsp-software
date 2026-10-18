@@ -1,4 +1,5 @@
-# Instructions for installing software for the Astronomy FSP in South Africa.
+# Astronomy FSP in South Africa Software Installation
+This document provides instructions on how to install required software.
 
 ## Table of contents
 1. [Anaconda and Astropy](#anaconda-and-astropy)
