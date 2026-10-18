@@ -1,6 +1,6 @@
 # Astronomy FSP in South Africa Software Installation
 
-This document provides instructions on how to install required software.  Instructions provided are for [Ubuntu](https://ubuntu.com/wsl/docs/stable/howto/install-ubuntu-wsl2/) installed under the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install).
+This document provides instructions on how to install required software.  Instructions provided are for [Ubuntu](https://ubuntu.com/wsl/docs/stable/howto/install-ubuntu-wsl2/) installed under the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) (__WSL__).
 
 ## Table of contents
 1. [Anaconda and Astropy](#anaconda-and-astropy)
@@ -10,10 +10,11 @@ This document provides instructions on how to install required software.  Instru
 5. [Aperture Photometry Tool](#aperture-photometry-tool)
 6. [IRAF and PyRAF](#iraf-and-pyraf)
 7. [File sharing between Windows and Linux](#file-sharing-between-windows-and-linux)
+8. [Additional documentation](#additional-documentation)
 
 
 ## Anaconda and Astropy
-This installation is done in a Windows Subsystem for Linux terminal session.  *`$` indicates a Linux prompt; you do not need to re-type the `$`, only the command that follows.*
+This installation is done in a WSL terminal.  *`$` indicates a Linux prompt; you do not need to re-type the `$`, only the command that follows.*
 
 **To install [conda](https://github.com/conda-forge/miniforge):**
 
@@ -76,3 +77,10 @@ To launch IRAF you will need to type `irafcl`.  To launch PyRAF type `pyraf`.
 ## File sharing between Windows and Linux
 
 To access files in your Linux environment from Windows, or to access files on your Windows host from within the Linux environment, follow the directions outlined here: <https://learn.microsoft.com/en-us/windows/wsl/filesystems>
+
+## Additional documentation
+
+- [Getting started with Linux and bash on WSL](https://learn.microsoft.com/en-us/windows/wsl/tutorials/linux)
+- [Managing conda environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+- [Setting up a WSL development environment](https://learn.microsoft.com/en-us/windows/wsl/setup/environment)
+- [IRAF Community Distribution](https://iraf-community.github.io)
