@@ -5,8 +5,8 @@ This document provides instructions on how to install required software.  Instru
 ## Table of contents
 1. [conda/mamba and astropy](#conda-mamba-and-astropy)
 2. [SAOImageDS9](#saoimageds9)
-3. [AstroImageJ](#astroimagej)
-4. [TOPCAT](#topcat)
+3. [TOPCAT](#topcat)
+4. [AstroImageJ](#astroimagej)
 5. [Aperture Photometry Tool](#aperture-photometry-tool)
 6. [IRAF and PyRAF](#iraf-and-pyraf)
 7. [File sharing between Windows and Linux](#file-sharing-between-windows-and-linux)
