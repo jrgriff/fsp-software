@@ -38,7 +38,7 @@ $ mamba install --channel conda-forge scipy matplotlib
 To activate the `astropy` environment in the future (for example, if you have just started a new WSL session), type `mamba activate astropy`
 
 ## SAOImageDS9
-**DS9** can be installed both within the WSL as well as natively in Windows.  You need to install DS9 within WSL in order for it to interact with IRAF and PyRAF properly.  To install in WSL, do:
+**[DS9](https://sites.google.com/cfa.harvard.edu/saoimageds9)** can be installed both within the WSL as well as natively in Windows.  You need to install DS9 within WSL in order for it to interact with IRAF and PyRAF properly.  To install in WSL, do:
 
 ```
 sudo apt install saods9
