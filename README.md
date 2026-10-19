@@ -27,7 +27,7 @@ $ bash Miniforge3-$(uname)-$(uname -m).sh
 
 The installer may prompt you to initialize conda for your shell; do this, and then also do `mamba init`.
 
-**To create the astropy environment:**
+**To create the [astropy](https://www.astropy.org) environment:**
 
 ```
 $ mamba create --channel conda-forge  --name astropy python
