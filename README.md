@@ -73,7 +73,7 @@ Extract the contents of the zip file to a location that is convient for you.  __
 To install __IRAF__ and __PyRAF__, run the following command in a WSL terminal:
 
 ```
-$ sudo apt install iraf python3-pyraf python3-pyds9
+$ sudo apt install astro-iraf python3-pyraf python3-pyds9
 ```
 
 To launch IRAF you will need to type `irafcl`.  To launch PyRAF type `pyraf`.
