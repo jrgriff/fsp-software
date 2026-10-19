@@ -16,7 +16,7 @@ This document provides instructions on how to install required software.  Instru
 ## conda/mamba and astropy
 This installation is done in a WSL terminal.  *`$` indicates a Linux prompt; you do not need to re-type the `$`, only the command that follows.*
 
-For the purposes of this guide, you will be installing [Miniforge](https://github.com/conda-forge/miniforge), a lightweight version of `conda` that also provides [`mamba`](https://mamba.readthedocs.io/en/latest/), a faster version of `conda`.
+For the purposes of this guide, you will be installing [Miniforge](https://github.com/conda-forge/miniforge), a lightweight version of conda that also provides [`mamba`](https://mamba.readthedocs.io/en/latest/), a faster version of conda.
 
 **To install [Miniforge](https://github.com/conda-forge/miniforge#unix-like-platforms-macos-linux--wsl):**
 
@@ -25,7 +25,7 @@ $ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/
 $ bash Miniforge3-$(uname)-$(uname -m).sh
 ```
 
-The installer may prompt you to initialize `conda` for your shell; do this, and then also do `mamba init`.
+The installer may prompt you to initialize conda for your shell; do this, and then also do `mamba init`.
 
 **To create the astropy environment:**
 
