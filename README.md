@@ -48,9 +48,6 @@ After DS9 has installed, type `ds9` to launch.
 
 *If you would like to install DS9 on Windows, visit <https://sites.google.com/cfa.harvard.edu/saoimageds9/download> to get the Windows installer.*
 
-## AstroImageJ
-Visit <https://astroimagej.com/#download> to download the Windows version of __AstroImageJ__.  This software package can run natively on Windows.  The installer is hosted on a slow mirror and can take about ~10 minutes to download.  Open the downloaded installer and use the defaults it offers you.  `AstroImageJ` will be available in your __Start__ menu on Windows after installation.
-
 ## TOPCAT
 First, you will need to install Java: <https://www.java.com/en/download/manual.jsp>
 - *Try the Windows Online installer first, and use the Offline installers if you encounter problems.*
@@ -59,12 +56,17 @@ Then, download the `topcat-full.jar` file from <https://www.star.bris.ac.uk/~mbt
 
 To launch __TOPCAT__, double-click `topcat-full.jar` after the download has completed and choose "Allow" on any permission prompts you are presented.
 
+## AstroImageJ
+Visit <https://astroimagej.com/#download> to download the Windows version of __AstroImageJ__.  
+
+This software runs natively on Windows using the same Java runtime that was installed for TOPCAT.  The installer is hosted on a slow mirror and can take about ~10 minutes to download.  Open the downloaded installer and use the defaults it offers you.  `AstroImageJ` will be available in your __Start__ menu on Windows after installation.
+
 ## Aperture Photometry Tool
 Download `APT_v3.1.0.zip` ("for Windows machines") from <https://www.aperturephotometry.org/downloads/>
 
 You may need to accept an expired SSL certificate to reach this website.
 
-Extract the contents of the zip file to a location that is convient for you.  __APT__ runs from within the folder it is extracted to; navigate to that folder and double-click `APT` (the Application file, not the Batch file).
+Extract the contents of the zip file to a location that is convient for you.  __APT__ is also a Java program and runs from within the folder it is extracted to; navigate to that folder and double-click `APT` (there bay also be an `APT.bat` file that can be ignored).
 
 ## IRAF and PyRAF
 
