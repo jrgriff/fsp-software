@@ -173,13 +173,29 @@ main {
 
 // Code blocks: copy button, and "$" prompts that show but can't be selected
 
-.highlighter-rouge {
+// The box styling moves to the wrapper so the code scrolls in its own area
+// and the button gets a gutter on the right that the code never runs under.
+.markdown-body div.highlighter-rouge {
   position: relative;
+  margin-bottom: 16px;
+  background: $gray-1;
+  border-left: 4px solid $dartmouth-green;
+  border-radius: 0 6px 6px 0;
 
-  pre {
-    padding-right: 76px;
+  .highlight {
+    margin-bottom: 0;
   }
 
+  .highlight pre {
+    margin-right: 76px;
+    padding-right: 0;
+    background: transparent;
+    border-left: 0;
+    border-radius: 0;
+  }
+}
+
+.highlighter-rouge {
   .gp,
   .gp + .w {
     color: $gray-3;
