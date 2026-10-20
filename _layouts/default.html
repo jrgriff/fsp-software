@@ -6,26 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap">
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="icon" type="image/png" href="{{ "/assets/images/favicon.png" | relative_url }}">
     {% include head-custom.html %}
   </head>
   <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      {% if site.title and site.title != page.title %}
-      {%- comment -%} Breadcrumb from the page URL, e.g. "fsp-software / mac" {%- endcomment -%}
-      {%- assign crumbs = page.url | remove: "index.html" | split: "/" -%}
-      {%- assign crumb_path = "/" %}
-      <h1><a href="{{ "/" | absolute_url }}">{{ site.title }}</a>
-        {%- for crumb in crumbs -%}
-          {%- if crumb != "" -%}
-            {%- assign crumb_path = crumb_path | append: crumb | append: "/" %}
-        <span class="text-gray">/</span>
-            {% if forloop.last %}{{ crumb }}{% else %}<a href="{{ crumb_path | absolute_url }}">{{ crumb }}</a>{% endif -%}
-          {%- endif -%}
-        {%- endfor %}
-      </h1>
-      {% endif %}
+    <header class="site-header">
+      <div class="container-lg px-3 site-header-inner">
+        <a class="site-logo" href="{{ "/" | relative_url }}">
+          <img src="{{ "/assets/images/lone-pine-white.png" | relative_url }}" alt="Dartmouth Lone Pine" width="32" height="56">
+        </a>
+        <div>
+          <div class="site-eyebrow">Dartmouth Astronomy FSP &middot; South Africa</div>
+          {%- comment -%} Breadcrumb from the page URL, e.g. "fsp-software / mac" {%- endcomment -%}
+          {%- assign crumbs = page.url | remove: "index.html" | split: "/" -%}
+          {%- assign crumb_path = "/" %}
+          <nav class="site-breadcrumb" aria-label="Breadcrumb">
+            {%- if crumbs.size > 1 -%}<a href="{{ "/" | relative_url }}">{{ site.title }}</a>{%- else -%}{{ site.title }}{%- endif -%}
+            {%- for crumb in crumbs -%}
+              {%- if crumb != "" -%}
+                {%- assign crumb_path = crumb_path | append: crumb | append: "/" %}
+            <span class="site-breadcrumb-sep">/</span>
+                {% if forloop.last %}<span aria-current="page">{{ crumb }}</span>{% else %}<a href="{{ crumb_path | relative_url }}">{{ crumb }}</a>{% endif -%}
+              {%- endif -%}
+            {%- endfor %}
+          </nav>
+        </div>
+      </div>
+    </header>
 
+    <main class="container-lg px-3 my-5 markdown-body">
       {{ content }}
 
       {% if site.github.private != true and site.github.license %}
@@ -33,7 +46,14 @@
         This site is open source. {% github_edit_link "Improve this page" %}.
       </div>
       {% endif %}
-    </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container-lg px-3 site-footer-inner">
+        <span>Dartmouth Astronomy Foreign Study Program in South Africa</span>
+        <a href="https://physics.dartmouth.edu/">Department of Physics and Astronomy</a>
+      </div>
+    </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
   </body>

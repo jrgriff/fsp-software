@@ -1,0 +1,162 @@
+---
+---
+
+@import "jekyll-theme-primer";
+
+// Dartmouth palette: https://communications.dartmouth.edu/guides-and-tools/design-guidelines/dartmouth-colors
+$dartmouth-green: #00693e;
+$forest-green: #12312b;
+$rich-forest-green: #0d1e1c;
+$spring-green: #c4dd88;
+$gray-1: #f7f7f7;
+$gray-2: #e2e2e2;
+$granite-gray: #424141;
+
+$serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: $granite-gray;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+// Header band
+
+.site-header {
+  background: $dartmouth-green;
+  color: #fff;
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.site-logo {
+  flex: none;
+  line-height: 0;
+
+  img {
+    display: block;
+    width: 32px;
+    height: 56px;
+  }
+}
+
+.site-eyebrow {
+  color: $spring-green;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.site-breadcrumb {
+  font-family: $serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.25;
+
+  a {
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.site-breadcrumb-sep {
+  color: rgba(255, 255, 255, 0.55);
+  margin: 0 2px;
+}
+
+// Page content
+
+.markdown-body {
+  color: $granite-gray;
+
+  a {
+    color: $dartmouth-green;
+
+    &:hover {
+      color: $forest-green;
+    }
+  }
+
+  h1,
+  h2 {
+    font-family: $serif;
+    color: $forest-green;
+  }
+
+  h1 {
+    border-bottom: 3px solid $dartmouth-green;
+  }
+
+  h2 {
+    margin-top: 40px;
+    border-bottom: 2px solid $spring-green;
+  }
+
+  h3,
+  h4 {
+    color: $forest-green;
+  }
+
+  pre,
+  .highlight pre {
+    background: $gray-1;
+    border-left: 4px solid $dartmouth-green;
+    border-radius: 0 6px 6px 0;
+  }
+
+  code {
+    background: rgba($dartmouth-green, 0.08);
+  }
+
+  pre code {
+    background: transparent;
+  }
+
+  blockquote {
+    border-left-color: $spring-green;
+  }
+}
+
+// Footer band
+
+.site-footer {
+  flex: none;
+  background: $forest-green;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}
+
+.site-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  a {
+    color: $spring-green;
+  }
+}
+
+@media (max-width: 544px) {
+  .site-breadcrumb {
+    font-size: 21px;
+  }
+}
