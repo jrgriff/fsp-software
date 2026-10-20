@@ -5,13 +5,14 @@ This document provides instructions on how to install required software on a Mac
 ## Table of contents
 1. [Homebrew and XQuartz](#homebrew-and-xquartz)
 2. [conda/mamba and astropy](#conda-mamba-and-astropy)
-3. [SAOImageDS9](#saoimageds9)
-4. [TOPCAT](#topcat)
-5. [AstroImageJ](#astroimagej)
-6. [Aperture Photometry Tool](#aperture-photometry-tool)
-7. [IRAF and PyRAF](#iraf-and-pyraf)
-8. [Opening apps from unidentified developers](#opening-apps-from-unidentified-developers)
-9. [Additional documentation](#additional-documentation)
+3. [Jupyter Notebook](#jupyter-notebook)
+4. [SAOImageDS9](#saoimageds9)
+5. [TOPCAT](#topcat)
+6. [AstroImageJ](#astroimagej)
+7. [Aperture Photometry Tool](#aperture-photometry-tool)
+8. [IRAF and PyRAF](#iraf-and-pyraf)
+9. [Opening apps from unidentified developers](#opening-apps-from-unidentified-developers)
+10. [Additional documentation](#additional-documentation)
 
 
 ## Homebrew and XQuartz
@@ -54,6 +55,26 @@ $ mamba install --channel conda-forge scipy matplotlib
 ```
 
 To activate the `astropy` environment in the future (for example, if you have just opened a new Terminal window), type `mamba activate astropy`
+
+## Jupyter Notebook
+[Jupyter Notebook](https://jupyter.org) lets you run Python interactively in your web browser.  **To install it** into the `astropy` environment:
+
+```
+$ mamba activate astropy
+$ mamba install --channel conda-forge notebook
+```
+
+**To launch Jupyter Notebook**, open Terminal and do:
+
+```
+$ mamba activate astropy
+$ cd ~
+$ jupyter notebook
+```
+
+Jupyter will open in your default web browser.  If it does not, copy the link it prints that looks like `http://localhost:8888/tree?token=...` and paste the whole link into your browser.  Notebooks you create are saved in the folder you were in when you launched Jupyter; `cd ~` starts it in your home folder.
+
+Leave the Terminal window open while you are using Jupyter.  When you are finished, save your notebooks, go back to Terminal and press __Control__+__C__ twice to shut Jupyter down.
 
 ## SAOImageDS9
 Visit <https://sites.google.com/cfa.harvard.edu/saoimageds9/download> and, under __macOS__, download the __macOS 12+ (Universal)__ version (not the X11 one).  Open the downloaded `.dmg` file and drag __SAOImageDS9__ into your __Applications__ folder.

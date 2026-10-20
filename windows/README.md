@@ -4,13 +4,14 @@ This document provides instructions on how to install required software.  Instru
 
 ## Table of contents
 1. [conda/mamba and astropy](#conda-mamba-and-astropy)
-2. [SAOImageDS9](#saoimageds9)
-3. [TOPCAT](#topcat)
-4. [AstroImageJ](#astroimagej)
-5. [Aperture Photometry Tool](#aperture-photometry-tool)
-6. [IRAF and PyRAF](#iraf-and-pyraf)
-7. [File sharing between Windows and Linux](#file-sharing-between-windows-and-linux)
-8. [Additional documentation](#additional-documentation)
+2. [Jupyter Notebook](#jupyter-notebook)
+3. [SAOImageDS9](#saoimageds9)
+4. [TOPCAT](#topcat)
+5. [AstroImageJ](#astroimagej)
+6. [Aperture Photometry Tool](#aperture-photometry-tool)
+7. [IRAF and PyRAF](#iraf-and-pyraf)
+8. [File sharing between Windows and Linux](#file-sharing-between-windows-and-linux)
+9. [Additional documentation](#additional-documentation)
 
 
 ## conda/mamba and astropy
@@ -36,6 +37,26 @@ $ mamba install --channel conda-forge scipy matplotlib
 ```
 
 To activate the `astropy` environment in the future (for example, if you have just started a new WSL session), type `mamba activate astropy`
+
+## Jupyter Notebook
+[Jupyter Notebook](https://jupyter.org) lets you run Python interactively in your web browser.  **To install it** into the `astropy` environment:
+
+```
+$ mamba activate astropy
+$ mamba install --channel conda-forge notebook
+```
+
+**To launch Jupyter Notebook**, open a WSL terminal and do:
+
+```
+$ mamba activate astropy
+$ cd ~
+$ jupyter notebook --no-browser
+```
+
+Jupyter will print a few lines ending with a link that looks like `http://localhost:8888/tree?token=...`.  Hold __Ctrl__ and click that link (or copy and paste the whole link into your web browser on Windows) to open Jupyter.  Notebooks you create are saved in the folder you were in when you launched Jupyter; `cd ~` starts it in your Linux home folder, which is much faster than working in your Windows folders under `/mnt/c`.
+
+Leave the terminal window open while you are using Jupyter.  When you are finished, save your notebooks, go back to the terminal and press __Ctrl__+__C__ twice to shut Jupyter down.
 
 ## SAOImageDS9
 **[DS9](https://sites.google.com/cfa.harvard.edu/saoimageds9)** can be installed both within the WSL as well as natively in Windows.  You need to install DS9 within WSL in order for it to interact with IRAF and PyRAF properly.  To install in WSL, do:
