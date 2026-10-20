@@ -1,4 +1,4 @@
-# Astronomy FSP in South Africa Software Installation
+# Astronomy FSP in South Africa Software Installation (Windows)
 
 This document provides instructions on how to install required software.  Instructions provided are for [Ubuntu](https://ubuntu.com/wsl/docs/stable/howto/install-ubuntu-wsl2/) installed under the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) (__WSL__).
 
