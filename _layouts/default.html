@@ -20,7 +20,7 @@
           <img src="{{ "/assets/images/lone-pine-white.png" | relative_url }}" alt="Dartmouth Lone Pine" width="32" height="56">
         </a>
         <div>
-          <div class="site-eyebrow">Dartmouth Astronomy FSP &middot; South Africa</div>
+          <a class="site-eyebrow" href="https://physics.dartmouth.edu/foreign-study/astronomy-fsp-south-africa">Dartmouth Astronomy FSP &middot; South Africa</a>
           {%- comment -%} Breadcrumb from the page URL, e.g. "fsp-software / mac" {%- endcomment -%}
           {%- assign crumbs = page.url | remove: "index.html" | split: "/" -%}
           {%- assign crumb_path = "/" %}
@@ -50,7 +50,7 @@
 
     <footer class="site-footer">
       <div class="container-lg px-3 site-footer-inner">
-        <a href="https://physics.dartmouth.edu/foreign-study/astronomy-fsp-south-africa">Dartmouth Astronomy FSP in South Africa</a>
+        <span>&copy; {{ site.time | date: "%Y" }} Trustees of Dartmouth College</span>
         <a href="https://physics.dartmouth.edu/">Department of Physics and Astronomy</a>
       </div>
     </footer>

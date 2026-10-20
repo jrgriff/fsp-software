@@ -53,11 +53,17 @@ main {
 }
 
 .site-eyebrow {
+  display: inline-block;
   color: $spring-green;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  &:hover {
+    color: $spring-green;
+    text-decoration: underline;
+  }
 }
 
 .site-breadcrumb {
