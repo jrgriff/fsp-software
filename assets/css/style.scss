@@ -10,6 +10,7 @@ $rich-forest-green: #0d1e1c;
 $spring-green: #c4dd88;
 $gray-1: #f7f7f7;
 $gray-2: #e2e2e2;
+$gray-3: #707070;
 $granite-gray: #424141;
 
 $serif: "Source Serif 4", Georgia, "Times New Roman", serif;
@@ -170,8 +171,66 @@ main {
   }
 }
 
+// Code blocks: copy button, and "$" prompts that show but can't be selected
+
+.highlighter-rouge {
+  position: relative;
+
+  pre {
+    padding-right: 76px;
+  }
+
+  .gp,
+  .gp + .w {
+    color: $gray-3;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 2px 10px;
+  border: 1px solid $gray-2;
+  border-radius: 6px;
+  background: #fff;
+  color: $forest-green;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $dartmouth-green;
+    color: $dartmouth-green;
+  }
+}
+
+// Narrow screens: compact header so the sticky bar takes less room
+
 @media (max-width: 544px) {
+  html {
+    scroll-padding-top: 84px;
+  }
+
+  .site-header-inner {
+    gap: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .site-logo img {
+    width: 24px;
+    height: 42px;
+  }
+
+  .site-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.04em;
+  }
+
   .site-breadcrumb {
-    font-size: 21px;
+    font-size: 19px;
   }
 }

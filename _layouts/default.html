@@ -56,5 +56,23 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
     <script>anchors.add();</script>
+    <script>
+      // Copy button for each code block; leaves out the "$ " prompts (Rouge's .gp spans)
+      document.querySelectorAll("div.highlighter-rouge").forEach(function (block) {
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "copy-button";
+        button.textContent = "Copy";
+        button.addEventListener("click", function () {
+          var code = block.querySelector("code").cloneNode(true);
+          code.querySelectorAll(".gp, .gp + .w").forEach(function (el) { el.remove(); });
+          navigator.clipboard.writeText(code.textContent.replace(/\n+$/, "")).then(function () {
+            button.textContent = "Copied!";
+            setTimeout(function () { button.textContent = "Copy"; }, 1500);
+          });
+        });
+        block.appendChild(button);
+      });
+    </script>
   </body>
 </html>

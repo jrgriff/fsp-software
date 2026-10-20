@@ -3,7 +3,7 @@
 This document provides instructions on how to install required software.  Instructions provided are for [Ubuntu](https://ubuntu.com/wsl/docs/stable/howto/install-ubuntu-wsl2/) installed under the [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install) (__WSL__).
 
 ## Table of contents
-1. [conda/mamba and astropy](#conda-mamba-and-astropy)
+1. [conda/mamba and astropy](#condamamba-and-astropy)
 2. [Jupyter Notebook](#jupyter-notebook)
 3. [SAOImageDS9](#saoimageds9)
 4. [TOPCAT](#topcat)
@@ -15,13 +15,13 @@ This document provides instructions on how to install required software.  Instru
 
 
 ## conda/mamba and astropy
-This installation is done in a WSL terminal.  *`$` indicates a Linux prompt; you do not need to re-type the `$`, only the command that follows.*
+This installation is done in a WSL terminal.  *`$` indicates a Linux prompt; you do not need to type the `$`, only the command that follows. The __Copy__ button on each box copies just the commands.*
 
 For the purposes of this guide, you will be installing [Miniforge](https://github.com/conda-forge/miniforge), a lightweight version of conda that also provides [`mamba`](https://mamba.readthedocs.io/en/latest/), a faster version of conda.
 
 **To install [Miniforge](https://github.com/conda-forge/miniforge#unix-like-platforms-macos-linux--wsl):**
 
-```
+```console
 $ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 $ bash Miniforge3-$(uname)-$(uname -m).sh
 ```
@@ -30,7 +30,7 @@ The installer may prompt you to initialize conda for your shell; do this, and th
 
 **To create the [astropy](https://www.astropy.org) environment:**
 
-```
+```console
 $ mamba create --channel conda-forge  --name astropy python
 $ mamba activate astropy
 $ mamba install --channel conda-forge scipy matplotlib
@@ -41,14 +41,14 @@ To activate the `astropy` environment in the future (for example, if you have ju
 ## Jupyter Notebook
 [Jupyter Notebook](https://jupyter.org) lets you run Python interactively in your web browser.  **To install it** into the `astropy` environment:
 
-```
+```console
 $ mamba activate astropy
 $ mamba install --channel conda-forge notebook
 ```
 
 **To launch Jupyter Notebook**, open a WSL terminal and do:
 
-```
+```console
 $ mamba activate astropy
 $ cd ~
 $ jupyter notebook --no-browser
@@ -61,8 +61,8 @@ Leave the terminal window open while you are using Jupyter.  When you are finish
 ## SAOImageDS9
 **[DS9](https://sites.google.com/cfa.harvard.edu/saoimageds9)** can be installed both within the WSL as well as natively in Windows.  You need to install DS9 within WSL in order for it to interact with IRAF and PyRAF properly.  To install in WSL, do:
 
-```
-sudo apt install saods9
+```console
+$ sudo apt install saods9
 ```
 
 After DS9 has installed, type `ds9` to launch.
@@ -93,7 +93,7 @@ Extract the contents of the zip file to a location that is convient for you.  __
 
 To install __IRAF__ and __PyRAF__, run the following command in a WSL terminal:
 
-```
+```console
 $ sudo apt install astro-iraf python3-pyraf python3-pyds9
 ```
 

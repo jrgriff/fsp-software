@@ -4,7 +4,7 @@ This document provides instructions on how to install required software on a Mac
 
 ## Table of contents
 1. [Homebrew and XQuartz](#homebrew-and-xquartz)
-2. [conda/mamba and astropy](#conda-mamba-and-astropy)
+2. [conda/mamba and astropy](#condamamba-and-astropy)
 3. [Jupyter Notebook](#jupyter-notebook)
 4. [SAOImageDS9](#saoimageds9)
 5. [TOPCAT](#topcat)
@@ -16,11 +16,11 @@ This document provides instructions on how to install required software on a Mac
 
 
 ## Homebrew and XQuartz
-Most of this installation is done in the __Terminal__ app (in __Applications__ → __Utilities__).  *`$` indicates a terminal prompt; you do not need to re-type the `$`, only the command that follows.*
+Most of this installation is done in the __Terminal__ app (in __Applications__ → __Utilities__).  *`$` indicates a terminal prompt; you do not need to type the `$`, only the command that follows. The __Copy__ button on each box copies just the commands.*
 
 [Homebrew](https://brew.sh) is a package manager for macOS, and is used below to install IRAF and Java.  **To install Homebrew**, run the following command and follow the prompts.  It will ask for your Mac password, and will also install Apple's Command Line Tools if you do not already have them:
 
-```
+```console
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
@@ -28,7 +28,7 @@ At the end of the installation, Homebrew prints a few commands under __Next step
 
 **To install [XQuartz](https://www.xquartz.org)**, an X11 server needed by some of the IRAF tools:
 
-```
+```console
 $ brew install --cask xquartz
 ```
 
@@ -39,7 +39,7 @@ For the purposes of this guide, you will be installing [Miniforge](https://githu
 
 **To install [Miniforge](https://github.com/conda-forge/miniforge#unix-like-platforms-macos-linux--wsl):**
 
-```
+```console
 $ curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 $ bash Miniforge3-$(uname)-$(uname -m).sh
 ```
@@ -48,7 +48,7 @@ The installer may prompt you to initialize conda for your shell; do this, and th
 
 **To create the [astropy](https://www.astropy.org) environment:**
 
-```
+```console
 $ mamba create --channel conda-forge  --name astropy python
 $ mamba activate astropy
 $ mamba install --channel conda-forge scipy matplotlib
@@ -59,14 +59,14 @@ To activate the `astropy` environment in the future (for example, if you have ju
 ## Jupyter Notebook
 [Jupyter Notebook](https://jupyter.org) lets you run Python interactively in your web browser.  **To install it** into the `astropy` environment:
 
-```
+```console
 $ mamba activate astropy
 $ mamba install --channel conda-forge notebook
 ```
 
 **To launch Jupyter Notebook**, open Terminal and do:
 
-```
+```console
 $ mamba activate astropy
 $ cd ~
 $ jupyter notebook
@@ -84,7 +84,7 @@ Launch __DS9__ from __Applications__ or Launchpad.  If macOS refuses to open it,
 ## TOPCAT
 **To install [TOPCAT](https://www.star.bris.ac.uk/~mbt/topcat/)** with Homebrew:
 
-```
+```console
 $ brew install --cask topcat
 ```
 
@@ -100,7 +100,7 @@ The download is hosted on a slow mirror and can take about ~10 minutes.  Open th
 ## Aperture Photometry Tool
 __APT__ is a Java program and needs Java 13 or newer.  **To install Java:**
 
-```
+```console
 $ brew install --cask temurin
 ```
 
@@ -113,7 +113,7 @@ Open the downloaded `.dmg` file and drag __APT__ into your __Applications__ fold
 ## IRAF and PyRAF
 **To install [IRAF](https://iraf-community.github.io)** (this also installs `xgterm` and `ximtool`, which use XQuartz):
 
-```
+```console
 $ brew tap iraf-community/tap
 $ brew trust iraf-community/tap
 $ brew install iraf x11iraf
@@ -121,7 +121,7 @@ $ brew install iraf x11iraf
 
 **To install PyRAF and pyds9** into the `astropy` environment:
 
-```
+```console
 $ mamba activate astropy
 $ pip install pyraf pyds9
 ```
