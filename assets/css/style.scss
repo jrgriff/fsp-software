@@ -14,6 +14,11 @@ $granite-gray: #424141;
 
 $serif: "Source Serif 4", Georgia, "Times New Roman", serif;
 
+// Keep in-page links (table of contents) from landing under the sticky header
+html {
+  scroll-padding-top: 104px;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -29,8 +34,12 @@ main {
 // Header band
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background: $dartmouth-green;
   color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 .site-header-inner {
