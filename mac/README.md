@@ -98,10 +98,10 @@ Visit <https://astroimagej.com/#download> and download the __Mac (Arm)__ version
 The download is hosted on a slow mirror and can take about ~10 minutes.  Open the downloaded file, drag __AstroImageJ__ into your __Applications__ folder, and launch it from there.
 
 ## Aperture Photometry Tool
-__APT__ is a Java program and needs Java 13 or newer.  **To install Java** ([Eclipse Temurin](https://adoptium.net) 25):
+__APT__ is a Java program and needs Java 13 or newer.  **To install Java:**
 
 ```console
-$ brew install --cask temurin@25
+$ brew install --cask temurin
 ```
 
 Then download `APT_v3.1.0.dmg` ("Mac, regular-sized GUI") from <https://www.aperturephotometry.org/downloads/>
