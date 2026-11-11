@@ -70,8 +70,17 @@ After DS9 has installed, type `ds9` to launch.
 *If you would like to install DS9 on Windows, visit <https://sites.google.com/cfa.harvard.edu/saoimageds9/download> to get the Windows installer.*
 
 ## TOPCAT
-First, you will need to install Java: <https://www.java.com/en/download/manual.jsp>
-- *Try the Windows Online installer first, and use the Offline installers if you encounter problems.*
+First, you will need to install Java.  Use __Eclipse Temurin 25__, a free build of Java that also runs __APT__ (below), which needs a newer Java than the one offered on java.com.
+
+*If you have previously installed Java from java.com, uninstall it first: open __Settings__ → __Apps__ and uninstall every entry named "Java 8 Update …".  APT will keep trying to use that older Java if it is still installed.*
+
+1. Download the Temurin 25 installer (`.msi` file): <https://api.adoptium.net/v3/installer/latest/25/ga/windows/x64/jre/hotspot/normal/eclipse>
+   - *If that link does not work, choose the __Windows__, __x64__, __JRE__, `.msi` download from <https://adoptium.net/temurin/releases/?os=windows&arch=x64&package=jre&version=25>*
+2. Open the downloaded `.msi` file.  On the __Custom Setup__ screen, click each of these items and choose "Will be installed on local hard drive":
+   - __Add to PATH__
+   - __Associate .jar__
+   - __Set JAVA_HOME variable__ *(this one is off by default, and APT needs it)*
+3. Click through the rest of the installer.
 
 Then, download the `topcat-full.jar` file from <https://www.star.bris.ac.uk/~mbt/topcat/#standalone>
 
@@ -87,7 +96,9 @@ Download `APT_v3.1.0.zip` ("for Windows machines") from <https://www.aperturepho
 
 You may need to accept an expired SSL certificate to reach this website.
 
-Extract the contents of the zip file to a location that is convient for you.  __APT__ is also a Java program and runs from within the folder it is extracted to; navigate to that folder and double-click `APT` (there bay also be an `APT.bat` file that can be ignored).
+Extract the contents of the zip file to a location that is convenient for you.  __APT__ is also a Java program (it needs Java 13 or newer, so use the Temurin 25 installed for TOPCAT) and runs from within the folder it is extracted to; navigate to that folder and double-click `APT` (there may also be an `APT.bat` file that can be ignored).
+
+*If APT shows "Error: Could not create the Java Virtual Machine", it found an old Java instead of Temurin 25.  Uninstall any "Java 8 Update …" entries in __Settings__ → __Apps__, and re-run the Temurin installer (choose __Change__) to make sure __Set JAVA_HOME variable__ is installed.*
 
 ## IRAF and PyRAF
 
